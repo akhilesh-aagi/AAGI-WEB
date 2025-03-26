@@ -67,10 +67,10 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
 
     try {
       // Initialize EmailJS with your public key
-      emailjs.init("o_E143rWeu7M523pE");
+      emailjs.init("S-LYUzK_M_rciCRju");
 
       // Send the email using EmailJS
-      await emailjs.send("service_rssyeg3", "template_kpmjnfv", {
+      await emailjs.send("service_nfpchzn", "template_9p085mb", {
         name: formData.name,
         email: formData.email,
         company: formData.company,
@@ -81,7 +81,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
       });
 
       // Send confirmation email to user
-      await emailjs.send("service_rssyeg3", "template_dwm3c5s", {
+      await emailjs.send("service_nfpchzn", "template_0utuobw", {
         email: formData.email,
         to_name: formData.name,
         subject: formData.product,
@@ -162,7 +162,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
                   type="text"
                   id="name"
                   required
-                  placeholder="Aagicorp Admin"
+                  placeholder="Full Name"
                   className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-dark-300/50 border border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 transition-all outline-none"
                   value={formData.name}
                   onChange={(e) =>
@@ -181,7 +181,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
                   type="email"
                   id="email"
                   required
-                  placeholder="adminsup_dir@aagicorp.com"
+                  placeholder="email@example.com"
                   className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-dark-300/50 border border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 transition-all outline-none"
                   value={formData.email}
                   onChange={(e) =>

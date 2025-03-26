@@ -31,11 +31,11 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:adminsup_dir@aagicorp.com"
+                  href="mailto:Aswin_Sathya@aagicorp.com"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>adminsup_dir@aagicorp.com</span>
+                  <span>Aswin_Sathya@aagicorp.com</span>
                 </a>
               </li>
             </ul>
