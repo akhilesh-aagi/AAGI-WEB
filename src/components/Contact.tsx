@@ -134,7 +134,7 @@ const Contact = () => {
                   icon: <Mail className="w-6 h-6 sm:w-8 sm:h-8" />,
                   title: "Email Us",
                   description: "For any inquiries or support",
-                  link: "sAswin_Sathya@aagicorp.com",
+                  link: "Aswin_Sathya@aagicorp.com",
                   href: "mailto:Aswin_Sathya@aagicorp.com",
                   gradient: "from-purple-500 to-pink-500",
                   delay: "100ms",
