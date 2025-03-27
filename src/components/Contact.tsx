@@ -139,15 +139,15 @@ const Contact = () => {
                   gradient: "from-purple-500 to-pink-500",
                   delay: "100ms",
                 },
-                {
-                  icon: <Phone className="w-6 h-6 sm:w-8 sm:h-8" />,
-                  title: "Call Us",
-                  description: "Mon-Fri from 9am to 6pm",
-                  link: "+1 437-998-4357",
-                  href: "+1 437-998-4357",
-                  gradient: "from-green-500 to-teal-500",
-                  delay: "200ms",
-                },
+                // {
+                //   icon: <Phone className="w-6 h-6 sm:w-8 sm:h-8" />,
+                //   title: "Call Us",
+                //   description: "Mon-Fri from 9am to 6pm",
+                //   link: "+1 1234567890",
+                //   href: "+1 1234567890",
+                //   gradient: "from-green-500 to-teal-500",
+                //   delay: "200ms",
+                // },
               ].map((item, index) => (
                 <div
                   key={index}

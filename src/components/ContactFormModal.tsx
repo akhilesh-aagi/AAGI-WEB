@@ -223,7 +223,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
                   type="tel"
                   id="phone"
                   required
-                  placeholder="+1 437-998-4357"
+                  placeholder="+1 1234567890"
                   className="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-dark-300/50 border border-gray-200 dark:border-gray-700 focus:border-blue-500 dark:focus:border-blue-400 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900 transition-all outline-none"
                   value={formData.phone}
                   onChange={(e) =>

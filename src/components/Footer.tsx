@@ -20,7 +20,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
                 <span>123 Innovation Drive, Tech City, TC 12345</span>
               </li> */}
-              <li>
+              {/* <li>
                 <a
                   href="tel:+15551234567"
                   className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -28,7 +28,7 @@ const Footer = () => {
                   <Phone className="w-5 h-5 flex-shrink-0" />
                   <span>+1 437-998-4357</span>
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="mailto:Aswin_Sathya@aagicorp.com"
