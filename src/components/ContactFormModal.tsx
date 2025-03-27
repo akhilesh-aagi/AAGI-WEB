@@ -29,7 +29,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
   const formRef = useRef<HTMLFormElement>(null);
 
   const products = [
-    "SaaS App for Bus Operators",
+    "AAGI-CoachCommand",
     // "Digital Bill Conversion Tool",
     // "Credit Check Portal",
   ];
