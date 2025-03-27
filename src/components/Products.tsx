@@ -240,7 +240,7 @@ const Products = () => {
               Coming Soon
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold gradient-text mb-4 sm:mb-6">
-              Digital Bill Conversion Tool
+              Digital Transform tool
             </h3>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 leading-relaxed">
               Transform your bills into digital itemized receipts. Our advanced
@@ -270,7 +270,7 @@ const Products = () => {
               Coming Soon
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold gradient-text mb-4 sm:mb-6">
-              Credit Check Portal
+              OhrTrueTrack
             </h3>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 leading-relaxed">
               Secure credibility verification online. Our comprehensive credit
