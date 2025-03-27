@@ -67,10 +67,10 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
 
     try {
       // Initialize EmailJS with your public key
-      emailjs.init("S-LYUzK_M_rciCRju");
+      emailjs.init("Wg36xgvNvz0x0UZ_z");
 
       // Send the email using EmailJS
-      await emailjs.send("service_nfpchzn", "template_9p085mb", {
+      await emailjs.send("service_06l4q5d", "template_5gahxwu", {
         name: formData.name,
         email: formData.email,
         company: formData.company,
@@ -81,7 +81,7 @@ const ContactFormModal: React.FC<ContactFormModalProps> = ({
       });
 
       // Send confirmation email to user
-      await emailjs.send("service_nfpchzn", "template_0utuobw", {
+      await emailjs.send("service_06l4q5d", "template_0bcwjwx", {
         email: formData.email,
         to_name: formData.name,
         subject: formData.product,

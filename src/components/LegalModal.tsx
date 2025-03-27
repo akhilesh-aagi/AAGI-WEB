@@ -240,13 +240,13 @@ const LegalModal: React.FC<LegalModalProps> = ({
           </div>
 
           {/* Footer - Fixed */}
-          {/* <div className="flex-none p-6 border-t border-gray-200 dark:border-gray-700">
+          <div className="flex-none p-6 border-t border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-500 dark:text-gray-400">
               If you have any questions about these{" "}
               {type === "privacy" ? "Privacy Policy" : "Terms of Service"},
-              please contact us at Aswin_Sathya@aagicorp.com
+              please contact us at support@aagicorp.com
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

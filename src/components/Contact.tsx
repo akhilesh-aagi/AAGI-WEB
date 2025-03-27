@@ -13,7 +13,7 @@ import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
 // Initialize EmailJS with your public key
-emailjs.init("S-LYUzK_M_rciCRju");
+emailjs.init("Wg36xgvNvz0x0UZ_z");
 
 const Contact = () => {
   const sectionRef = useScrollAnimation();
@@ -34,7 +34,7 @@ const Contact = () => {
     setIsSubmitting(true);
     try {
       // Send email to admin
-      await emailjs.send("service_nfpchzn", "template_kpmjnfv", {
+      await emailjs.send("service_06l4q5d", "template_5gahxwu", {
         name: (formRef.current.querySelector("#name") as HTMLInputElement)
           .value,
         email: (formRef.current.querySelector("#email") as HTMLInputElement)
@@ -48,7 +48,7 @@ const Contact = () => {
       });
 
       // Send confirmation email to user
-      await emailjs.send("service_nfpchzn", "template_0utuobw", {
+      await emailjs.send("service_06l4q5d", "template_0bcwjwx", {
         email: formRef.current.email.value,
         to_name: (formRef.current.querySelector("#name") as HTMLInputElement)
           .value,
@@ -134,8 +134,8 @@ const Contact = () => {
                   icon: <Mail className="w-6 h-6 sm:w-8 sm:h-8" />,
                   title: "Email Us",
                   description: "For any inquiries or support",
-                  link: "Aswin_Sathya@aagicorp.com",
-                  href: "mailto:Aswin_Sathya@aagicorp.com",
+                  link: "support@aagicorp.com",
+                  href: "support@aagicorp.com",
                   gradient: "from-purple-500 to-pink-500",
                   delay: "100ms",
                 },
