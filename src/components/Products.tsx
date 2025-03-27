@@ -69,7 +69,7 @@ const Products = () => {
                   Available Now
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold gradient-text">
-                  SaaS App for Bus Operators
+                  AAGI-CoachCommand
                 </h3>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                   Transform your bus operations with our comprehensive SaaS
