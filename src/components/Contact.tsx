@@ -121,7 +121,7 @@ const Contact = () => {
                     Quick Response Time
                   </h3>
                   <p className="text-gray-600 text-sm sm:text-base">
-                    We typically respond within 2-4 business hours
+                    We typically respond within a same day.
                   </p>
                 </div>
               </div>
