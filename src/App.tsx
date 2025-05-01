@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Features from "./components/Features";
+import LegalPage from "./components/LegalPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             }
           />
           <Route path="/features" element={<Features />} />
+          <Route path="/privacy-policy" element={<LegalPage />} />
         </Routes>
       </div>
     </Router>
