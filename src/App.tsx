@@ -5,10 +5,12 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Products from "./components/Products";
 import Services from "./components/Services";
+import CoreValues from "./components/CoreValues";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Features from "./components/Features";
 import LegalPage from "./components/LegalPage";
+import Endsection from "./components/Endsection";
 
 function App() {
   return (
@@ -25,12 +27,13 @@ function App() {
                 <About />
                 <Products />
                 <Services />
+                <Endsection />
                 <Contact />
                 <Footer />
               </>
             }
           />
-          <Route path="/features" element={<Features />} />
+          <Route path="/product/coachcommand/features" element={<Features />} />
           <Route path="/privacy-policy" element={<LegalPage />} />
         </Routes>
       </div>

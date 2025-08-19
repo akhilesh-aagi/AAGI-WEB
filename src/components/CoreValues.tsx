@@ -1,58 +1,58 @@
-import { Target, Lightbulb, Zap, Shield, Heart, Globe, TrendingUp } from "lucide-react";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { Target, Zap, Shield, Heart, Globe, TrendingUp } from "lucide-react";
+import { useEffect } from "react";
 
 const CoreValues = () => {
-  const sectionRef = useScrollAnimation();
-
   const values = [
     {
       icon: <Zap className="w-6 h-6 text-white" />,
       title: "Innovation",
-      description: "Pushing the boundaries of technology with forward-thinking solutions",
+      description:
+        "Pushing the boundaries of technology with forward-thinking solutions",
       bgColor: "bg-gray-600",
-      image: "/innovation.jpg"
+      image: "/corevalue/innovation.jpg",
     },
     {
       icon: <Shield className="w-6 h-6 text-white" />,
       title: "Reliability",
       description: "Building dependable products that ensure peace of mind",
       bgColor: "bg-gray-600",
-      image: "/reliability.jpg"
+      image: "/corevalue/reliability.jpg",
     },
     {
       icon: <Heart className="w-6 h-6 text-white" />,
       title: "Customer Success",
-      description: "Prioritizing customer needs with the right tools and support",
+      description:
+        "Prioritizing customer needs with the right tools and support",
       bgColor: "bg-gray-600",
-      image: "/Customer Success.jpg"
+      image: "/corevalue/CustomerSuccess .jpg",
     },
     {
       icon: <Target className="w-6 h-6 text-white" />,
       title: "Integrity",
-      description: "Operating with transparency and honesty in all relationships",
+      description:
+        "Operating with transparency and honesty in all relationships",
       bgColor: "bg-gray-600",
-      image: "/Integrity.jpg"
+      image: "/corevalue/Integrity.jpg",
     },
     {
       icon: <Globe className="w-6 h-6 text-white" />,
       title: "Global Impact",
       description: "Creating solutions that make a difference worldwide",
       bgColor: "bg-gray-600",
-      image: "/globalimpact.jpg"
+      image: "/corevalue/globalimpact.jpg",
     },
     {
       icon: <TrendingUp className="w-6 h-6 text-white" />,
       title: "Excellence",
       description: "Maintaining the highest standards in everything we do",
       bgColor: "bg-gray-600",
-      image: "/excellence.jpg"
+      image: "/corevalue/Integrity.jpg",
     },
   ];
 
   return (
-    <section id="core-values" className="py-20 bg-white" ref={sectionRef}>
+    <section id="core-values" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">
             Core Values
@@ -63,19 +63,20 @@ const CoreValues = () => {
           </h2>
         </div>
 
-        {/* Values Cards Grid - Two Rows */}
         <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <div
               key={value.title}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-white shadow-xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-shadow duration-300"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={value.image}
                   alt={value.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
 
@@ -96,4 +97,4 @@ const CoreValues = () => {
   );
 };
 
-export default CoreValues; 
+export default CoreValues;

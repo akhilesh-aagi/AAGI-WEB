@@ -7,6 +7,7 @@ import {
   MessageSquare,
   Clock,
   ArrowRight,
+  MapPin,
 } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import emailjs from "@emailjs/browser";
@@ -80,119 +81,107 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="section-padding relative overflow-hidden"
+      className="py-20 bg-white dark:bg-dark-100 transition-colors duration-300"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-full h-full">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-200 rounded-full mix-blend-multiply filter blur-[96px] opacity-20 animate-float"></div>
-          <div
-            className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-purple-200 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-20 scroll-trigger">
-          <div className="inline-flex items-center px-4 sm:px-6 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 font-semibold mb-6 sm:mb-8">
+        {/* Header */}
+        <div className="text-center mb-16 scroll-trigger">
+          <div className="inline-flex items-center px-4 sm:px-6 py-2 bg-blue-900/10 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 font-semibold mb-8 shadow-lg border border-blue-200 dark:border-blue-800">
             <MessageSquare className="w-5 h-5 mr-2" />
             Get in Touch
           </div>
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold gradient-text mb-6 sm:mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-8">
             Let's Connect
           </h2>
-          <p className="text-base sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            Have a question or want to learn more? We'd love to hear from you.
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Have a question or want to learn more? We'd love to hear from you
+            and discuss how we can help transform your business.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
-          {/* Contact Information - Moved to top on mobile */}
-          <div className="space-y-6 order-1">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Contact Information */}
+          <div className="space-y-8 order-1">
             {/* Quick Response Promise */}
-            <div className="glass-card rounded-2xl sm:rounded-[2rem] p-6 sm:p-8 hover-lift scroll-trigger">
-              <div className="flex items-start gap-4 sm:gap-6">
-                <div className="bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white flex-shrink-0">
-                  <Clock className="w-6 h-6 sm:w-8 sm:h-8" />
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-8 border border-blue-200 dark:border-blue-800 hover-lift scroll-trigger shadow-xl">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center bg-blue-600 text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <Clock className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold gradient-text mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                     Quick Response Time
                   </h3>
-                  <p className="text-gray-600 text-sm sm:text-base">
-                    We typically respond within a same day.
+                  <p className="text-gray-600 dark:text-gray-300 text-base">
+                    We typically respond within the same day to ensure your
+                    inquiries are addressed promptly.
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Contact Cards */}
-            <div className="space-y-4 sm:space-y-6">
+            <div className="space-y-6">
               {[
                 {
-                  icon: <Mail className="w-6 h-6 sm:w-8 sm:h-8" />,
+                  icon: Mail,
                   title: "Email Us",
                   description: "For any inquiries or support",
                   link: "support@aagicorp.com",
-                  href: "support@aagicorp.com",
-                  gradient: "from-purple-500 to-pink-500",
-                  delay: "100ms",
+                  href: "mailto:support@aagicorp.com",
+                  color: "text-blue-600 dark:text-blue-400",
                 },
-                // {
-                //   icon: <Phone className="w-6 h-6 sm:w-8 sm:h-8" />,
-                //   title: "Call Us",
-                //   description: "Mon-Fri from 9am to 6pm",
-                //   link: "+1 1234567890",
-                //   href: "+1 1234567890",
-                //   gradient: "from-green-500 to-teal-500",
-                //   delay: "200ms",
-                // },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="glass-card rounded-2xl sm:rounded-[2rem] p-6 sm:p-8 hover-lift scroll-trigger"
-                  style={{ transitionDelay: item.delay }}
-                >
-                  <div className="flex items-start gap-4 sm:gap-6">
-                    <div
-                      className={`bg-gradient-to-br ${item.gradient} rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white flex-shrink-0`}
-                    >
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm sm:text-base mb-2 sm:mb-4">
-                        {item.description}
-                      </p>
-                      <a
-                        href={item.href}
-                        className="group inline-flex items-center text-blue-600 hover:text-blue-700 text-sm sm:text-base"
+                {
+                  icon: Phone,
+                  title: "Call Us",
+                  description: "Speak directly with our team",
+                  link: "+91 98765 43210",
+                  href: "tel:+919876543210",
+                  color: "text-green-600 dark:text-green-400",
+                },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-white dark:bg-dark-200 p-8 border border-gray-200 dark:border-gray-700 hover-lift scroll-trigger shadow-xl"
+                  >
+                    <div className="flex items-start gap-6">
+                      <div
+                        className={`flex-shrink-0 w-14 h-14 flex items-center justify-center border ${item.color} border-current group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                       >
-                        {item.link}
-                        <ArrowRight className="w-4 h-4 ml-2 transform transition-transform group-hover:translate-x-1" />
-                      </a>
+                        <Icon className={`w-7 h-7 ${item.color}`} />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-300 text-base mb-3">
+                          {item.description}
+                        </p>
+                        <a
+                          href={item.href}
+                          className="group inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-base transition-colors"
+                        >
+                          {item.link}
+                          <ArrowRight className="w-4 h-4 ml-2 transform transition-transform group-hover:translate-x-1" />
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="glass-card rounded-2xl sm:rounded-[2rem] p-6 sm:p-8 md:p-12 hover-lift scroll-trigger order-2">
-            <form
-              ref={formRef}
-              onSubmit={handleSubmit}
-              className="space-y-6 sm:space-y-8"
-            >
-              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-                <div className="space-y-2">
+          <div className="bg-white dark:bg-dark-200 p-7 md:p-9 border border-gray-200 dark:border-gray-700 shadow-xl hover-lift scroll-trigger order-2">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-7">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div className="space-y-3">
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
                   >
                     Full Name
                   </label>
@@ -201,14 +190,14 @@ const Contact = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-base"
-                    placeholder="Full Name"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-dark-300 border border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all outline-none text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-lg"
+                    placeholder="Enter your full name"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
                   >
                     Email Address
                   </label>
@@ -217,16 +206,16 @@ const Contact = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-base"
-                    placeholder="email@example.com"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-dark-300 border border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all outline-none text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-lg"
+                    placeholder="Enter your email"
                   />
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
                 >
                   Subject
                 </label>
@@ -235,15 +224,15 @@ const Contact = () => {
                   id="subject"
                   name="subject"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none text-base"
-                  placeholder="How can we help?"
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-dark-300 border border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all outline-none text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-lg"
+                  placeholder="How can we help you?"
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-semibold text-gray-700 dark:text-gray-300"
                 >
                   Message
                 </label>
@@ -252,25 +241,25 @@ const Contact = () => {
                   name="message"
                   rows={4}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none resize-none text-base"
-                  placeholder="Tell us about your project..."
+                  className="w-full px-4 py-3 bg-gray-50 dark:bg-dark-300 border border-gray-200 dark:border-gray-600 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all outline-none resize-none text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 shadow-lg"
+                  placeholder="Tell us about your project or inquiry..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="magnetic-button w-full text-white px-6 sm:px-8 py-4 rounded-xl flex items-center justify-center gap-2 group"
+                className="magnetic-button w-full text-white px-8 py-3 flex items-center justify-center gap-3 group text-lg font-semibold shadow-xl"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
-                    <span>Sending...</span>
+                    <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>
+                    <span>Sending Message...</span>
                   </>
                 ) : (
                   <>
                     Send Message
-                    <Send className="w-5 h-5 transform transition-transform group-hover:translate-x-1" />
+                    <Send className="w-6 h-6 transform transition-transform group-hover:translate-x-1" />
                   </>
                 )}
               </button>
