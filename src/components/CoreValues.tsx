@@ -10,8 +10,6 @@ import {
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const CoreValues = () => {
-  const sectionRef = useScrollAnimation();
-
   const values = [
     {
       icon: <Zap className="w-6 h-6 text-white" />,
@@ -68,7 +66,6 @@ const CoreValues = () => {
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 dark:text-gray-300">
             Core Values
@@ -79,9 +76,8 @@ const CoreValues = () => {
           </h2>
         </div>
 
-        {/* Values Cards Grid - Two Rows */}
         <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <div
               key={value.title}
               className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800"
@@ -91,7 +87,9 @@ const CoreValues = () => {
                 <img
                   src={value.image}
                   alt={value.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
                 />
               </div>
 

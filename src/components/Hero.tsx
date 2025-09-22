@@ -15,7 +15,7 @@ const Hero = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/HeroBack.jpg')",
+            backgroundImage: "url('/HeroBack1.jpg')",
           }}
         ></div>
         {/* Dark overlay for readability */}
@@ -23,7 +23,7 @@ const Hero = () => {
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-24 md:py-40 flex flex-col items-center text-center">
+          <div className="pt-20 pb-16 md:pt-32 md:pb-24 flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 text-white/90 backdrop-blur-sm ring-1 ring-blue-400/30 shadow-sm mb-6">
               <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
               <span className="uppercase tracking-widest text-xs sm:text-sm font-semibold">
@@ -57,6 +57,23 @@ const Hero = () => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Scroll animated arrow at bottom */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg
+            className="w-6 h-6 text-white/70"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
         </div>
       </section>
 

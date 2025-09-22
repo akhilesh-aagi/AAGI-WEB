@@ -1,14 +1,11 @@
 import { Star, Users, Clock, CheckCircle } from "lucide-react";
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import CoreValues from "./CoreValues";
 import WhyWorkWithUs from "./WhyWorkWithUs";
 
 const About = () => {
-  const sectionRef = useScrollAnimation();
-
   return (
     <>
-      <section id="about" className="section-padding relative" ref={sectionRef}>
+      <section id="about" className="py-10 relative">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top center pill */}
           <div className="text-center mb-12">
@@ -19,7 +16,6 @@ const About = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left: Image with decorative frame */}
             <div className="relative">
               <div className="absolute -top-8 -left-8 w-[90%] h-[90%] border-4 border-blue-600/80 rounded-sm"></div>
               <img
@@ -29,7 +25,6 @@ const About = () => {
               />
             </div>
 
-            {/* Right: Content following reference design */}
             <div className="h-full flex flex-col">
               <h2 className="text-3xl sm:text-5xl font-bold tracking-tight uppercase text-blue-900 mb-6 font-sans dark:text-white">
                 Who We Are
@@ -43,7 +38,6 @@ const About = () => {
                 for our clients.
               </p>
 
-              {/* Feature blocks - horizontal layout */}
               <div className="flex gap-8 mb-8">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0 dark:bg-blue-900 dark:text-white">
@@ -63,7 +57,6 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Checklist */}
               <div className="space-y-4 mb-8">
                 {[
                   "Transparency in All Processes",

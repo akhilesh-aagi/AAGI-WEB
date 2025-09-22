@@ -1,10 +1,6 @@
-import { useScrollAnimation } from "../hooks/useScrollAnimation";
-
 const WhyWorkWithUs = () => {
-  const sectionRef = useScrollAnimation();
-
   return (
-    <section className="relative min-h-[70vh] overflow-hidden" ref={sectionRef}>
+    <section className="relative min-h-[60vh] sm:min-h-[70vh] overflow-hidden">
       {/* Parallax Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
@@ -18,11 +14,11 @@ const WhyWorkWithUs = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center min-h-[70vh]">
+      <div className="relative z-10 flex items-center min-h-[60vh] sm:min-h-[70vh] py-8 sm:py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-left">
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
               Why Choose AAGI
             </h1>
 
@@ -47,8 +43,8 @@ const WhyWorkWithUs = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-10">
-              <button className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <div className="mt-8 sm:mt-10 px-4 sm:px-0">
+              <button className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base">
                 Explore Our Solutions
                 <svg
                   className="w-5 h-5 ml-2"
