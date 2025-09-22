@@ -26,7 +26,9 @@ const Hero = () => {
           <div className="py-24 md:py-40 flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/5 text-white/90 backdrop-blur-sm ring-1 ring-blue-400/30 shadow-sm mb-6">
               <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-              <span className="uppercase tracking-widest text-xs sm:text-sm font-semibold">Welcome to AAGI</span>
+              <span className="uppercase tracking-widest text-xs sm:text-sm font-semibold">
+                Welcome to AAGI
+              </span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
@@ -34,7 +36,8 @@ const Hero = () => {
             </h1>
 
             <p className="mt-6 text-base sm:text-xl text-white/85 max-w-3xl">
-              Empowering enterprises with innovative digital solutions for seamless operations and sustainable growth
+              Empowering enterprises with innovative digital solutions for
+              seamless operations and sustainable growth
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
