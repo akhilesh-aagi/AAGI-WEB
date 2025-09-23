@@ -81,7 +81,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-20 bg-white dark:bg-dark-100 transition-colors duration-300"
+      className="py-20 bg-white dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -144,7 +144,7 @@ const Contact = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-white dark:bg-dark-200 p-8 border border-gray-200 dark:border-gray-700 hover-lift scroll-trigger shadow-xl"
+                    className="bg-white dark:bg-black p-8 border border-gray-200 dark:border-gray-700 hover-lift scroll-trigger shadow-xl"
                   >
                     <div className="flex items-start gap-6">
                       <div
@@ -175,7 +175,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-dark-200 p-7 md:p-9 border border-gray-200 dark:border-gray-700 shadow-xl hover-lift scroll-trigger order-2">
+          <div className="bg-white dark:bg-black p-7 md:p-9 border border-gray-200 dark:border-gray-700 shadow-xl hover-lift scroll-trigger order-2">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-7">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-3">

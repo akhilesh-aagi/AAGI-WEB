@@ -9,14 +9,17 @@ import {
 } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
+import React, { useRef } from "react";
+
 const CoreValues = () => {
+  const sectionRef = useRef<HTMLElement>(null);
   const values = [
     {
       icon: <Zap className="w-6 h-6 text-white" />,
       title: "Innovation",
       description: "Creating original products driven by our vision.",
       bgColor: "bg-gray-600",
-      image: "/innovation.jpg",
+      image: "/corevalue/innovation.jpg",
     },
     {
       icon: <Shield className="w-6 h-6 text-white" />,
@@ -24,7 +27,7 @@ const CoreValues = () => {
       description:
         "Every solution starts with us and is thoughtfully refined for clients.",
       bgColor: "bg-gray-600",
-      image: "/reliability.jpg",
+      image: "/corevalue/reliability.jpg",
     },
     {
       icon: <Heart className="w-6 h-6 text-white" />,
@@ -32,14 +35,14 @@ const CoreValues = () => {
       description:
         "Delivering high-quality, reliable products through skillful engineering.",
       bgColor: "bg-gray-600",
-      image: "/Customer Success.jpg",
+      image: "/corevalue/CustomerSuccess .jpg",
     },
     {
       icon: <Target className="w-6 h-6 text-white" />,
       title: "Integrity",
       description: "Transparent, honest, and committed to what we build.",
       bgColor: "bg-gray-600",
-      image: "/Integrity.jpg",
+      image: "/corevalue/Integrity.jpg",
     },
     {
       icon: <Globe className="w-6 h-6 text-white" />,
@@ -47,7 +50,7 @@ const CoreValues = () => {
       description:
         "Customizing solutions to meet specific needs without compromising integrity.",
       bgColor: "bg-gray-600",
-      image: "/globalimpact.jpg",
+      image: "/corevalue/globalimpact.jpg",
     },
     {
       icon: <TrendingUp className="w-6 h-6 text-white" />,
@@ -55,14 +58,14 @@ const CoreValues = () => {
       description:
         "Maintaining the highest standards in every product we engineer.",
       bgColor: "bg-gray-600",
-      image: "/excellence.jpg",
+      image: "/corevalue/excellence.jpg",
     },
   ];
 
   return (
     <section
       id="core-values"
-      className="py-20 bg-white dark:bg-gray-900"
+      className="py-20 bg-white dark:bg-black"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,7 +73,7 @@ const CoreValues = () => {
           <div className="inline-block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 dark:text-gray-300">
             Core Values
           </div>
-          <div className="w-16 h-1 bg-orange-500 mx-auto mb-6"></div>
+          <div className="w-16 h-1 bg-orange-500 mx-auto mb-6 dark:bg-orange-400"></div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 dark:text-white">
             Featured Values
           </h2>
@@ -80,16 +83,17 @@ const CoreValues = () => {
           {values.map((value) => (
             <div
               key={value.title}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800"
+              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border dark:border-gray-700"
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-700">
                 <img
                   src={value.image}
                   alt={value.title}
                   className="w-full h-full object-cover"
                   loading="eager"
                   decoding="async"
+                  style={{ filter: "brightness(0.95)" }}
                 />
               </div>
 

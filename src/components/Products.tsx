@@ -23,7 +23,7 @@ const Products = () => {
   return (
     <section
       id="products"
-      className="py-16 relative overflow-hidden bg-white dark:bg-dark-200"
+      className="py-16 relative overflow-hidden bg-white dark:bg-black"
       ref={sectionRef}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +51,7 @@ const Products = () => {
                 {/* Main image */}
                 <div className="relative z-10 overflow-hidden ">
                   <img
-                    src="/corevalue/excellence.jpg"
+                    src="/coachCommand.png"
                     alt="CoachCommand Bus Management Platform"
                     className="w-full aspect-[4/3] object-cover relative z-0"
                   />
@@ -187,7 +187,7 @@ const Products = () => {
                   {/* Main image */}
                   <div className="relative z-10 overflow-hidden">
                     <img
-                      src="/corevalue/Integrity.jpg"
+                      src="/ott.jpg"
                       alt="OhrTrueTrack Credit Verification"
                       className="w-full aspect-[4/3] object-cover relative z-0"
                     />

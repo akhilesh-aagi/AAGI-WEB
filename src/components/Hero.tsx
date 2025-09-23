@@ -36,8 +36,7 @@ const Hero = () => {
             </h1>
 
             <p className="mt-6 text-base sm:text-xl text-white/85 max-w-3xl">
-              Empowering enterprises with innovative digital solutions for
-              seamless operations and sustainable growth
+            From concept to customization, we build solutions that empower progress, drive efficiency, and create lasting value.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">

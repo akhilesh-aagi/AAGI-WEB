@@ -53,7 +53,7 @@ const Services = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="py-8 sm:py-12 lg:py-16 bg-white dark:bg-dark-100 transition-colors duration-300"
+      className="py-8 sm:py-12 lg:py-16 bg-white dark:bg-black transition-colors duration-300"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -66,7 +66,8 @@ const Services = () => {
             Comprehensive Solutions
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-            Empowering businesses with next-generation SaaS solutions and digital transformation services
+            Empowering businesses with next-generation SaaS solutions and
+            digital transformation services
           </p>
         </div>
 

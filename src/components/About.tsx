@@ -5,7 +5,7 @@ import WhyWorkWithUs from "./WhyWorkWithUs";
 const About = () => {
   return (
     <>
-      <section id="about" className="py-10 relative">
+      <section id="about" className="py-10 relative dark:bg-black">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top center pill */}
           <div className="text-center mb-12">
@@ -17,7 +17,7 @@ const About = () => {
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="relative">
-              <div className="absolute -top-8 -left-8 w-[90%] h-[90%] border-4 border-blue-600/80 rounded-sm"></div>
+              <div className="absolute -top-8 -left-8 w-[90%] h-[90%] border-4 border-blue-600/80 rounded-sm dark:border-blue-400"></div>
               <img
                 src="/AboutUs.jpg"
                 alt="About AAGI"
@@ -89,7 +89,7 @@ const About = () => {
       </section>
 
       {/* What we have achieved so far section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+      <section className="py-20 bg-gray-900 relative overflow-hidden dark:bg-black">
         {/* Background image */}
         <div className="absolute inset-0">
           <img
