@@ -16,11 +16,11 @@
   }
 
   label {
-    @apply dark:text-gray-200;
+    @apply dark:text-gray-200 font-sans;
   }
 
   input, textarea {
-    @apply dark:bg-dark-300/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-400;
+    @apply dark:bg-dark-300/50 dark:border-gray-700 dark:text-white dark:placeholder-gray-400 font-sans;
   }
 
   @keyframes glow {
@@ -146,6 +146,17 @@
     }
   }
 
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0);
@@ -264,13 +275,17 @@
     animation: smoothFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
 
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
   .glass-effect {
     @apply backdrop-blur-xl bg-white/80 dark:bg-dark-200/80;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   .section-padding {
-    @apply py-24 md:py-32;
+    @apply py-8 md:py-12;
   }
 
   .hover-card {
@@ -367,5 +382,14 @@
 
   .animate-ping-slow {
     animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
   }
 }

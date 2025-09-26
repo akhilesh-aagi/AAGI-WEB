@@ -1,6 +1,6 @@
 const Endsection = () => {
   return (
-    <section className="relative min-h-[70vh] overflow-hidden">
+    <section className="relative min-h-[50vh] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
@@ -12,17 +12,17 @@ const Endsection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center min-h-[70vh]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl mx-auto text-left">
+      <div className="relative z-10 flex items-center min-h-[50vh]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-2xl mx-auto text-left">
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               Let's Redefine What's Possible
             </h1>
 
             {/* Description */}
-            <div className="text-lg sm:text-xl text-white/90 leading-relaxed mb-8">
-              <p className="mb-4">
+            <div className="text-sm sm:text-base text-white/90 leading-relaxed mb-6">
+              <p className="mb-3">
                 Growing a business is hard. Scaling it shouldn't be. Our
                 platform helps teams collaborate, automate, and innovate without
                 limits.
@@ -35,11 +35,11 @@ const Endsection = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-10">
-              <button className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <div className="mt-6">
+              <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl text-sm">
                 Explore Our Solutions
                 <svg
-                  className="w-5 h-5 ml-2"
+                  className="w-4 h-4 ml-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

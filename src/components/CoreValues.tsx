@@ -65,28 +65,28 @@ const CoreValues = () => {
   return (
     <section
       id="core-values"
-      className="py-20 bg-white dark:bg-black"
+      className="py-12 bg-white dark:bg-black"
       ref={sectionRef}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className="inline-block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 dark:text-gray-300">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <div className="inline-block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 dark:text-gray-300">
             Core Values
           </div>
-          <div className="w-16 h-1 bg-orange-500 mx-auto mb-6 dark:bg-orange-400"></div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 dark:text-white">
+          <div className="w-12 h-0.5 bg-orange-500 mx-auto mb-4 dark:bg-orange-400"></div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 dark:text-white">
             Featured Values
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {values.map((value) => (
             <div
               key={value.title}
-              className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 dark:bg-gray-800 dark:border dark:border-gray-700"
+              className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border dark:border-gray-700"
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-700">
+              <div className="relative h-32 overflow-hidden bg-gray-100 dark:bg-gray-700">
                 <img
                   src={value.image}
                   alt={value.title}
@@ -98,11 +98,11 @@ const CoreValues = () => {
               </div>
 
               {/* Content */}
-              <div className="pt-6 pb-6 px-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 dark:text-white">
+              <div className="pt-4 pb-4 px-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 dark:text-white">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed dark:text-gray-300">
+                <p className="text-sm text-gray-600 leading-relaxed dark:text-gray-300">
                   {value.description}
                 </p>
               </div>

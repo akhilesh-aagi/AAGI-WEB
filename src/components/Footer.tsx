@@ -7,27 +7,27 @@ const Footer = () => {
   const [showTerms, setShowTerms] = useState(false);
 
   return (
-    <footer className="bg-blue-950 text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+    <footer className="bg-blue-950 text-white pt-10 pb-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           {/* Company Information */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">
+            <h3 className="text-lg font-bold text-white mb-4">
               AATVAAS GRANGER INTERNATIONALS
             </h3>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">
+            <h3 className="text-base font-semibold text-white mb-4">
               Quick Links
             </h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-2">
               {["Home", "About", "Products", "Contact"].map((link) => (
                 <a
                   key={link}
                   href={`#${link.toLowerCase().replace(" ", "-")}`}
-                  className="text-blue-100 hover:text-white transition-colors"
+                  className="text-blue-100 hover:text-white transition-colors text-sm"
                 >
                   {link}
                 </a>
@@ -37,12 +37,12 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Products</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base font-semibold text-white mb-4">Products</h3>
+            <ul className="space-y-2">
               <li>
                 <a
                   href="#products"
-                  className="text-blue-100 hover:text-white transition-colors"
+                  className="text-blue-100 hover:text-white transition-colors text-sm"
                 >
                   CoachCommand
                 </a>
@@ -50,7 +50,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#products"
-                  className="text-blue-100 hover:text-white transition-colors"
+                  className="text-blue-100 hover:text-white transition-colors text-sm"
                 >
                   OhrTrueTrack
                 </a>
@@ -60,21 +60,21 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6">
+            <h3 className="text-base font-semibold text-white mb-4">
               Contact Info
             </h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-blue-100">
-                <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>+1 98765 43210</span>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2 text-blue-100">
+                <Phone className="w-4 h-4 flex-shrink-0" />
+                <span className="text-sm">+1 98765 43210</span>
               </li>
               <li className="text-blue-100">
                 <a
                   href="mailto:support@aagicorp.com"
-                  className="flex items-center gap-3 text-blue-100 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-blue-100 hover:text-white transition-colors"
                 >
-                  <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>support@aagicorp.com</span>
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span className="text-sm">support@aagicorp.com</span>
                 </a>
               </li>
             </ul>
@@ -82,22 +82,22 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-blue-700 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-blue-100 text-sm text-center sm:text-left">
+        <div className="border-t border-blue-700 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p className="text-blue-100 text-xs text-center sm:text-left">
               © 2025 AATVAAS GRANGER INTERNATIONALS. All Rights Reserved.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowPrivacyPolicy(true)}
-                className="text-sm text-blue-100 hover:text-white transition-colors"
+                className="text-xs text-blue-100 hover:text-white transition-colors"
               >
                 Privacy Policy
               </button>
               <span className="text-blue-300">|</span>
               <button
                 onClick={() => setShowTerms(true)}
-                className="text-sm text-blue-100 hover:text-white transition-colors"
+                className="text-xs text-blue-100 hover:text-white transition-colors"
               >
                 Terms of Service
               </button>

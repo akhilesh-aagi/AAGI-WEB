@@ -53,46 +53,46 @@ const Services = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="py-8 sm:py-12 lg:py-16 bg-white dark:bg-black transition-colors duration-300"
+      className="py-6 sm:py-8 lg:py-10 bg-white dark:bg-black transition-colors duration-300"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center px-3 sm:px-4 lg:px-6 py-2 rounded-full bg-blue-900/10 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 font-semibold mb-6 sm:mb-8 text-sm sm:text-base">
-            <Code className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-900/10 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 font-semibold mb-4 text-sm">
+            <Code className="w-4 h-4 mr-2" />
             Our Services
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-6 sm:mb-8 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-4 leading-tight">
             Comprehensive Solutions
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
             Empowering businesses with next-generation SaaS solutions and
             digital transformation services
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {servicesData.map((service, idx) => {
             const Icon = service.icon;
             return (
               <div
                 key={idx}
-                className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 group p-4 sm:p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300"
+                className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4 group p-3 sm:p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300"
               >
                 {/* Icon */}
                 <div
-                  className={`flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border ${service.color} border-current group-hover:scale-110 transition-transform duration-300`}
+                  className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border ${service.color} border-current group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <Icon className={`w-6 h-6 sm:w-7 sm:h-7 ${service.color}`} />
+                  <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${service.color}`} />
                 </div>
 
                 {/* Text */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white group-hover:underline mb-2 sm:mb-3 leading-tight">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white group-hover:underline mb-2 leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
